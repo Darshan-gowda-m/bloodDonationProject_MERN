@@ -1,50 +1,83 @@
-# bloodDonationProject_MERN(WORKING IN PROGRESS)
+# 🩸 Blood Donation Tracking System — MERN Stack (🚧 Work in Progress)
 
-A full-stack MERN project on Blood collection and usage tracking  acting as a interface between hospitals,donors and organizations
+A full-stack **MERN** (MongoDB, Express, React, Node.js) project aimed at streamlining **blood collection, donation, and usage tracking**, acting as a centralized interface for **hospitals, donors, and organizations**.
 
-PROBLEM:
-Introduction The scarcity of timely blood supply in India has severe consequences for public health, contributing to a high number of preventable deaths. The World Health Organization (WHO) estimates that India needs at least 1% of its population to donate blood annually—approximately 13 million units—to meet demand. However, the country often faces a shortfall of up to 3 million units each year, impacting various vulnerable populations.
+---
 
-Key Impacts of Blood Shortages
-Maternal Mortality
-Critical Need: Severe bleeding, particularly postpartum hemorrhage, accounts for about 20% of maternal deaths in India. Access to timely blood is crucial during childbirth.
-Statistics: WHO reports around 70,000 annual maternal deaths due to hemorrhage, many of which could be mitigated with adequate blood supply.
-Trauma and Accident-Related Deaths
+## ❗ Problem Statement
 
-Road Safety Crisis: With over 150,000 road traffic deaths annually, many trauma victims require immediate blood transfusions.
-Consequences: Delays in accessing blood significantly increase mortality rates among trauma patients.
-Chronic Illnesses
+India faces a significant **blood supply shortfall**—with a demand of 13 million units annually, the country often lacks 2–3 million units. This gap critically affects:
 
-Thalassemia and Hemophilia: Approximately 100,000 Indians with thalassemia depend on regular blood transfusions. Hemophilia patients also require a steady supply, and shortages can lead to life-threatening complications.
-Cancer Treatment: Cancer patients undergoing chemotherapy often need transfusions. A lack of blood exacerbates their vulnerable condition.
-Anemia-Related Deaths
-ent.
+### 🔻 Key Consequences:
+
+- **🩸 Maternal Mortality**: Postpartum hemorrhage causes ~20% of maternal deaths. Timely blood access could prevent many of the 70,000 deaths annually (WHO).
+- **🚑 Trauma & Road Accidents**: Over 150,000 annual traffic fatalities—many victims require urgent transfusions.
+- **🧬 Chronic Conditions**: Patients with **Thalassemia**, **Hemophilia**, or undergoing **Chemotherapy** require regular transfusions.
+- **⚠️ Anemia & Cancer Patients**: Lack of consistent blood access worsens their conditions.
+
+---
+
+## ✅ Key Features Implemented
+
+### 🔐 User Authentication
+- Secure **Sign-Up/Login** using **JWT**.
+- **Role-based access**: Donors, Recipients, Hospitals, Admins.
+
+### 🧾 Profile Management
+- View donation history.
+- Passwords secured with **bcrypt encryption**.
+
+### 🏥 Hospital & Organization Dashboard
+- Track blood **availability**, **inflow/outflow**, and **donation logs**.
+- Request and manage blood units in real-time.
+
+### 🧑‍💼 Admin Panel
+- Manage all users and roles.
+- View system-wide **analytics**, delete or suspend accounts.
+
+---
+
+## 🧰 Tech Stack
+
+| Layer      | Tech Stack                     |
+|------------|--------------------------------|
+| Frontend   | React.js, Axios, React Router  |
+| Backend    | Node.js, Express.js            |
+| Database   | MongoDB (Mongoose ODM)         |
+| Security   | JWT, bcrypt                    |
+| Deployment | (Planned) Vercel / Render / Railway |
+
+---
+
+## 🚧 Features In Progress
+
+- 📍 Blood request matching by location
+- 📊 Real-time analytics for donation drives
+- 📆 Event scheduling and reminders for donors
+- 📱 Mobile-responsive UI
+- 🩺 Hospital onboarding workflow
+
+---
+
+## 📁 Folder Structure (WIP)
 
 
-KEY FEATURES IMPLEMENTED
+---
 
-1.User Authentication:
-Sign-up and login functionality (using JWT).
-Role-based access (donors, recipients, admins).
+## 📌 Installation
 
-2.Profile Management:
-View donation history.
-encryption:bcrypt
+```bash
+# Clone the repository
+git clone https://github.com/darshanGowdaM/bloodDonationProject_MERN.git
+cd bloodDonationProject_MERN
 
-3.Hospitals and organisations tracking
-Hospitals and organisations can track availabilities and in and out of blood
-collection and donation histories
+# Install backend dependencies
+cd server
+npm install
 
-4.User Management:
-Admin dashboard to manage users (delete and analytics).
+# Install frontend dependencies
+cd ../client
+npm install
 
-TECH STACK
-MongoDB: For storing user data, donation records, and event details.
-Express.js: To handle API requests and manage server-side logic.
-React: For building the user interface with reusable components.
-Node.js: For the server-side environment, handling API requests, and connecting to the database.
-
-
-
-
-
+# Run both client & server (use concurrently or manually)
+npm start
